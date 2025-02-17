@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mixer with Vue.js</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="controls">
+            <div class="sliders">
+                <div class="slider">
+                    <label for="red">red:</label>
+                    <input type="range" id="red" v-model="red" min="0" max="255">
+                </div>
+                <div class="slider">
+                    <label for="green">green:</label>
+                    <input type="range" id="green" v-model="green" min="0" max="255">
+                </div>
+                <div class="slider">
+                    <label for="blue">blue:</label>
+                    <input type="range" id="blue" v-model="blue" min="0" max="255">
+                </div>
+            </div>
+            <div class="button-section">
+                <p id="color-code">{{ hexColor }}</p>
+                <button @click="fetchRandomColor">Random Color</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
